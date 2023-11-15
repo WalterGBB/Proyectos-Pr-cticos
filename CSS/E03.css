@@ -1,0 +1,51 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.logo-container{
+    width: 470px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+table{
+    border-spacing: 0; /*Pega los datos a las celdas*/
+    border-collapse: collapse; /*Afina al máximo el borde*/
+    width: 900px;
+    margin: 100px auto; /*margen de 100 píxeles en la parte superior, derecha, inferior e izquierda, y además, automáticamente centra horizontalmente el elemento dentro de su contenedor.*/
+}
+
+thead{
+    background-color: #0f7272;
+    color: white;
+    position: sticky; /*Cuando deslizamos hacía abajo el thead se queda pegado arriba*/
+    top: 0; /*Para que funcione el sticky*/
+}
+
+td, th{
+    border: solid 1px black;
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(98, 218, 218);
+}
+
+tbody tr:nth-child(odd) { /*el tbody al inicio para que estos efectos no afecten al thead*/
+    background-color: rgba(176, 255, 255, 0.998);
+}
+
+tbody tr:hover{
+    cursor: pointer;
+    background-color: rgb(200, 173, 224);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Agrega una sombra para el efecto de elevación */
+    transform: scale(1.05); /* Hace que la fila parezca sobresalir */
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Agrega una transición suave */
+}
+

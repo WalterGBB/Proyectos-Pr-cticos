@@ -1,0 +1,112 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cards {
+    display: flex; /*Alinea horizontalmente las tarjetas*/
+    width: 100%;
+    padding: 50px; /*espacio generado entre el borde del contenedor cards y los elementos card del interior*/
+    justify-content: center;
+}
+
+.cards .card{
+    background-color: #0090ff;
+    color: white;
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s ease;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.3), -4px 0 10px rgba(0, 0, 0, 0.2), -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards .card a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cards .card .header{
+    flex: 1;
+}
+
+.cards .card .footer .autor a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cards .card .footer img{
+    width: 50px;
+    border: 3px solid rgb(230, 144, 82);
+    border-radius: 60%;
+    object-fit: cover;
+    background-color: chocolate;
+}
+
+.cards .card:hover{
+    margin-right: 80px;
+    transform: rotate(3deg) translate(-15px);
+    cursor: pointer;
+    color: yellow;
+    background: #006aff;
+    padding: 25px;
+}
+
+.cards .card .header .date{
+    padding: 10px 0;
+}
+
+.cards .card .header .title{
+    font-size: 28px;
+}
+
+.cards .card[class*="element"]{
+    margin-left: -100px;
+}
+
+.card .header img{
+    width: 100px;
+    position: absolute;
+    top: 49%;
+    left: 30%;
+    
+}
+
+.element-1 .header img{
+    width: 80px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.element-2 .header img{
+    width: 120px;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.element-3 .header img{
+    width: 90px;
+    position: absolute;
+    border-radius: 50%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.element-1:hover,
+.element-2:hover{
+    margin-left: -130px;
+}
+
